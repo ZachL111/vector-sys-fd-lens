@@ -1,0 +1,6 @@
+Package: VectorSysFdLens
+Type: Package
+Title: VectorSysFdLens
+Version: 0.1.0
+License: MIT
+Description: Build an R toolkit that studies fd behavior through negative fixtures, with human-readable error snapshots and no credentials or hosted services.
