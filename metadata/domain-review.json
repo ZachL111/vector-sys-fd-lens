@@ -1,0 +1,73 @@
+{
+  "repo": "vector-sys-fd-lens",
+  "language": "R",
+  "category": "Systems programming",
+  "goal": "Build an R toolkit that studies fd behavior through negative fixtures, with human-readable error snapshots and no credentials or hosted services.",
+  "review_model": {
+    "terms": [
+      "allocation pressure",
+      "dirty state",
+      "guard slack",
+      "layout drift"
+    ],
+    "lanes": [
+      "ship",
+      "watch",
+      "hold"
+    ],
+    "score": "signal * 2 + slack + confidence - drag * 3",
+    "purpose": "surface the domain-specific cases that need the most careful review"
+  },
+  "cases": [
+    {
+      "name": "baseline",
+      "focus": "allocation pressure",
+      "signal": 79,
+      "slack": 42,
+      "drag": 25,
+      "confidence": 87,
+      "score": 212,
+      "lane": "ship"
+    },
+    {
+      "name": "stress",
+      "focus": "dirty state",
+      "signal": 63,
+      "slack": 21,
+      "drag": 18,
+      "confidence": 93,
+      "score": 186,
+      "lane": "ship"
+    },
+    {
+      "name": "edge",
+      "focus": "guard slack",
+      "signal": 84,
+      "slack": 48,
+      "drag": 20,
+      "confidence": 82,
+      "score": 238,
+      "lane": "ship"
+    },
+    {
+      "name": "recovery",
+      "focus": "layout drift",
+      "signal": 79,
+      "slack": 23,
+      "drag": 16,
+      "confidence": 66,
+      "score": 199,
+      "lane": "ship"
+    },
+    {
+      "name": "stale",
+      "focus": "allocation pressure",
+      "signal": 66,
+      "slack": 46,
+      "drag": 26,
+      "confidence": 62,
+      "score": 162,
+      "lane": "ship"
+    }
+  ]
+}
